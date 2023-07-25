@@ -107,9 +107,8 @@ for (iter = (*deck)->next; iter != NULL; iter = tmp)
 {
 tmp = iter->next;
 insert = iter->prev;
-while (insert != NULL &&
-       insert->card->kind == iter->card->kind &&
-       get_value(insert) > get_value(iter))
+while (insert != NULL && insert->card->kind == iter->card->kind &&
+get_value(insert) > get_value(iter))
 {
 insert->next = iter->next;
 if (iter->next != NULL)
